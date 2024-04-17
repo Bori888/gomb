@@ -37,8 +37,6 @@ class Feladatok():
         logikai = True
         while(logikai):
             if len(self.ev3.buttons.pressed())> 0:
-                print(self.ev3.buttons.pressed())
-                print(type(self.ev3.buttons.pressed()[0]))
                 if self.ev3.buttons.pressed()==[Button.UP]:
                     self.robot.drive(100, 0)
                     wait(500)
@@ -54,10 +52,6 @@ class Feladatok():
                 elif self.ev3.buttons.pressed()==[Button.CENTER]:
                     self.robot.stop(Stop.BRAKE)
                     logikai= False
-
-                
-                
-                
                 self.robot.stop(Stop.BRAKE)
 
 
